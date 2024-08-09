@@ -17,6 +17,12 @@
 		98669FEB2C6501B7004FF623 /* TripTribeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98669FEA2C6501B7004FF623 /* TripTribeTests.swift */; };
 		98669FF52C6501B7004FF623 /* TripTribeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98669FF42C6501B7004FF623 /* TripTribeUITests.swift */; };
 		98669FF72C6501B7004FF623 /* TripTribeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98669FF62C6501B7004FF623 /* TripTribeUITestsLaunchTests.swift */; };
+		986E7E372C65D48A00284964 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 986E7E362C65D48A00284964 /* FirebaseAnalytics */; };
+		986E7E392C65D48A00284964 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 986E7E382C65D48A00284964 /* FirebaseAuth */; };
+		986E7E3B2C65D48A00284964 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 986E7E3A2C65D48A00284964 /* FirebaseFirestore */; };
+		986E7E3D2C65D48A00284964 /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = 986E7E3C2C65D48A00284964 /* FirebaseInAppMessaging-Beta */; };
+		986E7E3F2C65D48A00284964 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 986E7E3E2C65D48A00284964 /* FirebaseMessaging */; };
+		986E7E412C65D49C00284964 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 986E7E402C65D49C00284964 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,7 @@
 		98669FF02C6501B7004FF623 /* TripTribeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripTribeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		98669FF42C6501B7004FF623 /* TripTribeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTribeUITests.swift; sourceTree = "<group>"; };
 		98669FF62C6501B7004FF623 /* TripTribeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripTribeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		986E7E402C65D49C00284964 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				986E7E372C65D48A00284964 /* FirebaseAnalytics in Frameworks */,
+				986E7E392C65D48A00284964 /* FirebaseAuth in Frameworks */,
+				986E7E3F2C65D48A00284964 /* FirebaseMessaging in Frameworks */,
+				986E7E3B2C65D48A00284964 /* FirebaseFirestore in Frameworks */,
+				986E7E3D2C65D48A00284964 /* FirebaseInAppMessaging-Beta in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +93,7 @@
 		98669FC42C6501B5004FF623 = {
 			isa = PBXGroup;
 			children = (
+				986E7E402C65D49C00284964 /* GoogleService-Info.plist */,
 				98669FCF2C6501B5004FF623 /* TripTribe */,
 				98669FE92C6501B7004FF623 /* TripTribeTests */,
 				98669FF32C6501B7004FF623 /* TripTribeUITests */,
@@ -146,6 +159,13 @@
 			dependencies = (
 			);
 			name = TripTribe;
+			packageProductDependencies = (
+				986E7E362C65D48A00284964 /* FirebaseAnalytics */,
+				986E7E382C65D48A00284964 /* FirebaseAuth */,
+				986E7E3A2C65D48A00284964 /* FirebaseFirestore */,
+				986E7E3C2C65D48A00284964 /* FirebaseInAppMessaging-Beta */,
+				986E7E3E2C65D48A00284964 /* FirebaseMessaging */,
+			);
 			productName = TripTribe;
 			productReference = 98669FCD2C6501B5004FF623 /* TripTribe.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +238,9 @@
 				Base,
 			);
 			mainGroup = 98669FC42C6501B5004FF623;
+			packageReferences = (
+				986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 98669FCE2C6501B5004FF623 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +259,7 @@
 			files = (
 				98669FDD2C6501B7004FF623 /* Assets.xcassets in Resources */,
 				98669FE02C6501B7004FF623 /* Base in Resources */,
+				986E7E412C65D49C00284964 /* GoogleService-Info.plist in Resources */,
 				98669FD82C6501B5004FF623 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +635,45 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		986E7E362C65D48A00284964 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		986E7E382C65D48A00284964 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		986E7E3A2C65D48A00284964 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		986E7E3C2C65D48A00284964 /* FirebaseInAppMessaging-Beta */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseInAppMessaging-Beta";
+		};
+		986E7E3E2C65D48A00284964 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 986E7E352C65D48A00284964 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		98669FD92C6501B5004FF623 /* TripTribe.xcdatamodeld */ = {
